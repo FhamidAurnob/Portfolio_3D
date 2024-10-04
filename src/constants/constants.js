@@ -1,4 +1,11 @@
 import {
+    android,
+    oriongroup,
+    flutter,
+    kotlin,
+    austclassroom,
+    bachelorshome,
+    orionportal,
     mobile,
     backend,
     creator,
@@ -20,6 +27,7 @@ import {
     tesla,
     shopify,
     carrent,
+    ani_weather,
     jobit,
     tripguide,
     threejs,
@@ -54,12 +62,24 @@ const services = [
         icon: backend,
     },
     {
-        title: "Content Creator",
+        title: "Android Developer",
         icon: creator,
     },
 ];
 
 const technologies = [
+    {
+        name: "Android",
+        icon: android,
+    },
+    {
+        name: "Flutter",
+        icon: flutter,
+    },
+    {
+        name: "Kotlin",
+        icon: kotlin,
+    },
     {
         name: "HTML 5",
         icon: html,
@@ -72,18 +92,18 @@ const technologies = [
         name: "JavaScript",
         icon: javascript,
     },
-    {
-        name: "TypeScript",
-        icon: typescript,
-    },
+    // {
+    //     name: "TypeScript",
+    //     icon: typescript,
+    // },
     {
         name: "React JS",
         icon: reactjs,
     },
-    {
-        name: "Redux Toolkit",
-        icon: redux,
-    },
+    // {
+    //     name: "Redux Toolkit",
+    //     icon: redux,
+    // },
     {
         name: "Tailwind CSS",
         icon: tailwind,
@@ -92,10 +112,10 @@ const technologies = [
         name: "Node JS",
         icon: nodejs,
     },
-    {
-        name: "MongoDB",
-        icon: mongodb,
-    },
+    // {
+    //     name: "MongoDB",
+    //     icon: mongodb,
+    // },
     {
         name: "Three JS",
         icon: threejs,
@@ -108,31 +128,32 @@ const technologies = [
         name: "figma",
         icon: figma,
     },
-    {
-        name: "docker",
-        icon: docker,
-    },
+    // {
+    //     name: "docker",
+    //     icon: docker,
+    // },
+    
 ];
 
 const experiences = [
-    {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#383E56",
-        date: "March 2020 - April 2021",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
+    // {
+    //     title: "React.js Developer",
+    //     company_name: "Starbucks",
+    //     icon: starbucks,
+    //     iconBg: "#383E56",
+    //     date: "March 2020 - April 2021",
+    //     points: [
+    //         "Developing and maintaining web applications using React.js and other related technologies.",
+    //         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+    //         "Implementing responsive design and ensuring cross-browser compatibility.",
+    //         "Participating in code reviews and providing constructive feedback to other developers.",
+    //     ],
+    // },
     {
         title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#E6DEDD",
+        company_name: "Orion Group",
+        icon: oriongroup,
+        iconBg: "#383E56",
         date: "Jan 2021 - Feb 2022",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
@@ -143,10 +164,10 @@ const experiences = [
     },
     {
         title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
+        company_name: "Orion Group",
+        icon: oriongroup,
         iconBg: "#383E56",
-        date: "Jan 2022 - Jan 2023",
+        date: "Oct 2022 - Present",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -154,111 +175,187 @@ const experiences = [
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
+    // {
+    //     title: "Full stack Developer",
+    //     company_name: "Meta",
+    //     icon: meta,
+    //     iconBg: "#E6DEDD",
+    //     date: "Jan 2023 - Present",
+    //     points: [
+    //         "Developing and maintaining web applications using React.js and other related technologies.",
+    //         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+    //         "Implementing responsive design and ensuring cross-browser compatibility.",
+    //         "Participating in code reviews and providing constructive feedback to other developers.",
+    //     ],
+    // },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#E6DEDD",
-        date: "Jan 2023 - Present",
+        title: "Android Developer",
+        company_name: "Orion Group",
+        icon: oriongroup,
+        iconBg: "#383E56",
+        date: "Oct 2022 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Designing and building advanced applications for the Android platform using Kotlin, Flutter and Java.",
+            "Collaborating with cross-functional teams to define, design, and ship new features.",
+            "Troubleshooting and debugging to optimize performance and improve user experience.",
+            "Ensuring the best possible performance, quality, and responsiveness of applications.",
+            "Implementing third-party APIs and ensuring backward compatibility with different Android versions.",
+            "Writing clean, maintainable, and scalable code, while adhering to best practices and guidelines.",
+            "Participating in code reviews, providing feedback"
         ],
     },
 ];
 
 const testimonials = [
-    {
-        testimonial:
-            "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-        name: "Sara Lee",
-        designation: "CFO",
-        company: "Acme Co",
-        image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-        testimonial:
-            "I've never met a web developer who truly cares about their clients' success like Rick does.",
-        name: "Chris Brown",
-        designation: "COO",
-        company: "DEF Corp",
-        image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-        testimonial:
-            "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-        name: "Lisa Wang",
-        designation: "CTO",
-        company: "456 Enterprises",
-        image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
+    // {
+    //     testimonial:
+    //         "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+    //     name: "Sara Lee",
+    //     designation: "CFO",
+    //     company: "Acme Co",
+    //     image: "https://randomuser.me/api/portraits/women/4.jpg",
+    // },
+    // {
+    //     testimonial:
+    //         "I've never met a web developer who truly cares about their clients' success like Rick does.",
+    //     name: "Chris Brown",
+    //     designation: "COO",
+    //     company: "DEF Corp",
+    //     image: "https://randomuser.me/api/portraits/men/5.jpg",
+    // },
+    // {
+    //     testimonial:
+    //         "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    //     name: "Lisa Wang",
+    //     designation: "CTO",
+    //     company: "456 Enterprises",
+    //     image: "https://randomuser.me/api/portraits/women/6.jpg",
+    // },
 ];
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "Ani Weather",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "Android-based application that provides users with real-time weather forecasts, current conditions, and weather alerts.",
+
         tags: [
             {
-                name: "react",
+                name: "Kotlin",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "Android",
                 color: "green-text-gradient",
             },
-            {
-                name: "tailwind",
-                color: "pink-text-gradient",
-            },
+        
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        image: ani_weather,
+        source_code_link: "https://github.com/FhamidAurnob/Ani_Weather",
     },
     {
-        name: "Job IT",
+        name: "FM Banking",
         description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+            "Desktop based banking application using java GUI (Netbeans)",
         tags: [
             {
-                name: "react",
+                name: "Netbeans",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: "Java",
                 color: "green-text-gradient",
             },
-            {
-                name: "scss",
-                color: "pink-text-gradient",
-            },
         ],
-        image: jobit,
-        source_code_link: "https://github.com/",
+        //image: blank,
+        source_code_link: "https://github.com/FhamidAurnob/Banking-Application",
     },
     {
-        name: "Trip Guide",
+        name: "Orion Portal",
         description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "Yearly Appraisal mobile application of Orion Group",
         tags: [
             {
-                name: "nextjs",
+                name: "Android",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "Flutter",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "Dart",
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        image: orionportal,
+        source_code_link: "https://play.google.com/store/apps/details?id=net.oriongroup.oriongroupportal&pcampaignid=web_share",
+    },
+    {
+        name: "Bachelors Home",
+        description:
+            "Web based project for Bachelors to find and rent house or rooms",
+
+        tags: [
+            {
+                name: "ASP.NET",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "HTML",
+                color: "green-text-gradient",
+            },
+            {
+                name: "JavaScript",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "C#",
+                color: "red-text-gradient",
+            },
+            {
+                name: "SQL",
+                color: "purple-text-gradient",
+            },
+        ],
+        image: bachelorshome,
+        source_code_link: "https://github.com/FhamidAurnob/BachelorsHome-AUST-CSE-Software-Development-V",
+    },
+    {
+        name: "Aust Classroom",
+        description:
+            "Document and PDF sharing android application only for AUSTIANS",
+
+        tags: [
+            {
+                name: "Java",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Android",
+                color: "green-text-gradient",
+            },
+        
+        ],
+        image: austclassroom,
+        source_code_link: "https://github.com/FhamidAurnob/Aust_Classroom",
+    },
+    {
+        name: "Paranoid Messenger",
+        description:
+            "Desktop based Instant Messaging App(Group + individual chat) made using Java Netbeans",
+        tags: [
+            {
+                name: "Netbeans",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Java",
+                color: "green-text-gradient",
+            },
+        ],
+        //image: blank,
+        source_code_link: "https://github.com/FhamidAurnob/Paranoid_Messenger",
     },
 ];
 
