@@ -96,30 +96,30 @@ const PersonalDetails = () => {
     { title: "Skills", value: "React, JavaScript, Node.js, Flutter, Kotlin" },
     { title: "Hobbies", value: "Reading, Traveling, Coding, Playing Outdoor Games" },
     // Social Media Links
-    { 
-      title: "Facebook", 
-      value: (
-        <a href="https://www.facebook.com/fahmid.muttaki" target="_blank" rel="noreferrer">
-          <FaFacebook className="text-secondary hover:text-white text-[24px] cursor-pointer" />
-        </a>
-      ) 
-    },
-    { 
-      title: "LinkedIn", 
-      value: (
-        <a href="https://www.linkedin.com/in/fhamid-aurnob-115a8915a/" target="_blank" rel="noreferrer">
-          <FaLinkedin className="text-secondary hover:text-white text-[24px] cursor-pointer" />
-        </a>
-      ) 
-    },
-    { 
-      title: "Github", 
-      value: (
-        <a href="https://github.com/FhamidAurnob" target="_blank" rel="noreferrer">
-          <FaGithub className="text-secondary hover:text-white text-[24px] cursor-pointer" />
-        </a>
-      ) 
-    },
+    // { 
+    //   title: "Facebook", 
+    //   value: (
+    //     <a href="https://www.facebook.com/fahmid.muttaki" target="_blank" rel="noreferrer">
+    //       <FaFacebook className="text-secondary hover:text-white text-[24px] cursor-pointer" />
+    //     </a>
+    //   ) 
+    // },
+    // { 
+    //   title: "LinkedIn", 
+    //   value: (
+    //     <a href="https://www.linkedin.com/in/fhamid-aurnob-115a8915a/" target="_blank" rel="noreferrer">
+    //       <FaLinkedin className="text-secondary hover:text-white text-[24px] cursor-pointer" />
+    //     </a>
+    //   ) 
+    // },
+    // { 
+    //   title: "Github", 
+    //   value: (
+    //     <a href="https://github.com/FhamidAurnob" target="_blank" rel="noreferrer">
+    //       <FaGithub className="text-secondary hover:text-white text-[24px] cursor-pointer" />
+    //     </a>
+    //   ) 
+    // },
   ];
 
   return (
