@@ -7,6 +7,8 @@ import logo from "./logo.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
+import fmbanking from "./fmbanking.png";
+import paranoidmes from "./paranoidmes.png";
 import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
@@ -50,6 +52,8 @@ export {
   austclassroom,
   bachelorshome,
   fma,
+  fmbanking,
+  paranoidmes,
   logo,
   backend,
   creator,

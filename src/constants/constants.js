@@ -31,6 +31,8 @@ import {
     jobit,
     tripguide,
     threejs,
+    fmbanking,
+    paranoidmes,
 } from "../assets";
 
 export const navLinks = [
@@ -267,7 +269,7 @@ const projects = [
                 color: "green-text-gradient",
             },
         ],
-        //image: blank,
+        image: fmbanking,
         source_code_link: "https://github.com/FhamidAurnob/Banking-Application",
     },
     {
@@ -354,7 +356,7 @@ const projects = [
                 color: "green-text-gradient",
             },
         ],
-        //image: blank,
+        image: paranoidmes,
         source_code_link: "https://github.com/FhamidAurnob/Paranoid_Messenger",
     },
 ];

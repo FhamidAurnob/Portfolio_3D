@@ -77,7 +77,7 @@ import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa"; // React Icon
 const PersonalDetailCard = ({ title, value }) => (
   <motion.div
     variants={fadeIn("", "spring", 0.5, 0.75)}
-    className='bg-black-200 p-7 rounded-3xl xs:w-[500px] w-full'
+    className='bg-black-200 p-7 rounded-3xl xs:w-[300px] w-full'
   >
     <div className='mt-1'>
       <p className='text-white font-medium text-[20px]'>{title}</p>
@@ -89,7 +89,7 @@ const PersonalDetailCard = ({ title, value }) => (
 const PersonalDetails = () => {
   const details = [
     { title: "Name", value: "Fhamid Mottaki Aurnob" },
-    { title: "Occupation", value: "Software Developer at Orion Group" },
+    { title: "Occupation", value: "Executive Software Engineer at Orion Group" },
     { title: "Location", value: "Dhaka, Bangladesh" },
     { title: "Email", value: "fmaurnob0@gmail.com" },
     { title: "Phone", value: "+8801521204516" },
@@ -143,7 +143,7 @@ const PersonalDetails = () => {
         <img
           src={fhamid} // Replace with your actual image path
           alt="Fhamid Mottaki Aurnob"
-          className="rounded-3xl object-cover md:w-[300px] w-[200px] h-[400px] md:h-[400px]"
+          className="rounded-3xl object-cover md:w-[300px] w-[200px] h-[300px] md:h-[400px]"
         />
       </div>
     </div>
