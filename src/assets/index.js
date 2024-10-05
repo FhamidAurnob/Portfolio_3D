@@ -2,6 +2,7 @@ import ani_weather from "./ani_weather.jpg"
 import austclassroom from "./austclassroom.jpg"
 import bachelorshome from "./bachelorshome.png"
 import orionportal from "./orionportal.jpg"
+import fma from "./fma.svg"
 import logo from "./logo.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
@@ -10,7 +11,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-
+import fhamid from "./fhamid.jpg";
 import android from "./tech/android.png";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -45,8 +46,10 @@ export {
   flutter,
   kotlin,
   ani_weather,
+  fhamid,
   austclassroom,
   bachelorshome,
+  fma,
   logo,
   backend,
   creator,

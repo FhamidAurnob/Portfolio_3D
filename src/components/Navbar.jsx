@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants/constants';
-import { logo, menu, close } from '../assets';
+import { fma, menu, close } from '../assets';
+import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Navbar = () => {
   const [active, setactive] = useState('');
@@ -21,7 +22,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img src={fma} alt="fma" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Fhamid Mottaki Aurnob &nbsp; 
             <span className="sm:block hidden"> | Software Developer</span>
@@ -34,10 +35,23 @@ const Navbar = () => {
               className={`${active === link.title ? "text-white":"text-secondary"}hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
+
+           {/* Add social media icons */}
+           <li className="flex items-center gap-4">
+            <a href="https://www.facebook.com/fahmid.muttaki" target="_blank" rel="noreferrer">
+              <FaFacebook className="text-secondary hover:text-white text-[18px] cursor-pointer" />
+            </a>
+            <a href="https://www.linkedin.com/in/fhamid-aurnob-115a8915a/" target="_blank" rel="noreferrer">
+              <FaLinkedin className="text-secondary hover:text-white text-[18px] cursor-pointer" />
+            </a>
+            <a href="https://github.com/FhamidAurnob" target="_blank" rel="noreferrer">
+              <FaGithub className="text-secondary hover:text-white text-[18px] cursor-pointer" />
+            </a>
+          </li>
+
         </ul>
 
 
@@ -64,6 +78,31 @@ const Navbar = () => {
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
+
+              {/* Social Media Icons for Mobile */}
+              <li className="flex items-center gap-4">
+                <a
+                  href="https://www.facebook.com/fahmid.muttaki"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaFacebook className="text-secondary hover:text-white text-[18px] cursor-pointer" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/fhamid-aurnob-115a8915a/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaLinkedin className="text-secondary hover:text-white text-[18px] cursor-pointer" />
+                </a>
+                <a
+                  href="https://github.com/FhamidAurnob"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub className="text-secondary hover:text-white text-[18px] cursor-pointer" />
+                </a>
+              </li>
             </ul>
 
           </div>
