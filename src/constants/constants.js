@@ -156,7 +156,7 @@ const experiences = [
         company_name: "Orion Group",
         icon: oriongroup,
         iconBg: "#383E56",
-        date: "Jan 2021 - Feb 2022",
+        date: "Oct 2022 - Present",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
