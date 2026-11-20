@@ -1,66 +1,65 @@
-import React from "react";
-import Tilt from 'react-parallax-tilt';
+import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
-import { styles } from "../styles";
-import { services } from "../constants/constants";
+import { services, quickFacts } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
+import { spotlightHandler } from "../hooks";
+import SectionHead from "./SectionHead";
+import Icon from "./Icons";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
-
-        <h3 className='text-white text-[20px] font-bold text-center'>
-          {title}
-        </h3>
+const ServiceCard = ({ index, title, desc, icon, accent }) => (
+  <motion.div variants={fadeIn("up", "spring", index * 0.15, 0.8)} className="h-full">
+    <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable glareMaxOpacity={0.12} glareBorderRadius="24px" scale={1.02} className="h-full">
+      <div onMouseMove={spotlightHandler} className="spotlight gradient-border glass rounded-3xl p-7 h-full min-h-[250px] flex flex-col">
+        <div className="w-14 h-14 rounded-2xl grid place-items-center" style={{ background: `${accent}1f`, color: accent, boxShadow: `0 0 40px -8px ${accent}` }}>
+          <Icon name={icon} className="w-7 h-7" />
+        </div>
+        <h3 className="mt-6 font-display text-xl font-bold text-white">{title}</h3>
+        <p className="mt-2 text-secondary text-sm leading-relaxed">{desc}</p>
+        <span className="mt-auto pt-6 font-mono text-[11px] text-white/30">0{index + 1}</span>
       </div>
-    </motion.div>
-  </Tilt>
+    </Tilt>
+  </motion.div>
 );
 
-const About = () => {
-  return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+const About = () => (
+  <>
+    <SectionHead index="01" sub="Introduction" title="Code meets" accent="capital." />
+
+    <div className="mt-12 grid lg:grid-cols-[1.4fr_1fr] gap-10 items-start">
+      <motion.div variants={fadeIn("", "", 0.1, 1)} className="space-y-5 text-[17px] leading-[1.85] text-secondary">
+        <p>
+          I&apos;m <span className="text-white font-semibold">Fhamid Mottaki Aurnob</span>, a Computer Science &amp; Engineering
+          graduate from AUST who lives where software and finance overlap.
+        </p>
+        <p>
+          For nearly three years at <span className="text-white">Orion Group</span> I built Android applications and worked with
+          SAP Plant Maintenance. Today at <span className="text-white">City Bank PLC</span> I work inside the Core Banking System
+          every day — so I know how financial products are actually used, not just how they&apos;re coded.
+        </p>
+        <p>
+          After hours I ship Kotlin apps, build fintech platforms like <span className="text-gold font-semibold">GoldHunt</span>, and
+          engineer algorithmic trading systems for gold markets.
+        </p>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-        I'm a skilled software developer with experience in Android Studio, Flutter, Kotlin and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
-      </motion.p>
-
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+      <motion.div variants={fadeIn("left", "spring", 0.2, 1)} className="grid grid-cols-2 gap-3">
+        {quickFacts.map((f) => (
+          <div key={f.label} className="glass rounded-2xl p-5">
+            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-secondary">{f.label}</p>
+            <p className="mt-2 font-display font-bold text-white">{f.value}</p>
+          </div>
         ))}
-      </div>
-    </>
-  );
-};
+      </motion.div>
+    </div>
+
+    <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {services.map((s, i) => (
+        <ServiceCard key={s.title} index={i} {...s} />
+      ))}
+    </div>
+  </>
+);
 
 export default SectionWrapper(About, "about");
